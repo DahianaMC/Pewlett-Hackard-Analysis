@@ -13,7 +13,7 @@
  
  ## Analysis
  ### Information provided by client:
-  - The client made available 6 tables that includes employees information.  The summary of the information is presented in an Entity Relationship Diagram (ERD), where we can appreciate the relationship between tables:
+  - The client made available 6 tables that includes employees information.  The summary of the information is presented in an Entity Relationship Diagram (ERD), where we can understand the relationship between tables:
   
   
 _____________________________ 
