@@ -42,3 +42,5 @@ _____________________________
     - The information provided includes the tables showed in the ERD diag
     
     2. Include both tables for mentorship and let them know there is one table with duplicates
+    
+    3, make suggestion what else can be done with the data.
