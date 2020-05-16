@@ -14,6 +14,8 @@
  ## Analysis
  ### Information provided by client:
   - The client made available 6 tables that includes employees information.  The summary of the information is presented in an Entity Relationship Diagram (ERD), where we can understand the relationship between tables:
+  ![EmployeeDB](https://github.com/DahianaMC/Pewlett-Hackard-Analysis/blob/master/EmployeeDB.png)
+  
   
   
 _____________________________ 
