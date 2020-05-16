@@ -11,8 +11,8 @@
   - Technical Analysis 2: Provide mentorship eligibility as follow:
     - Table 1: Provide a table with employee number, first and last name, title, from_date and to_date and check for duplicates.
  
- ### Analysis
- - Information provided by client:
+ ## Analysis
+ ###Information provided by client:
   - The client made available 6 tables that includes employees information.  The summary of the information is presented in an Entity Relationship Diagram (ERD), where we can appreciate the relationship between tables:
   
   
