@@ -13,7 +13,7 @@
     - Table 1: Provide a table with employee number, first and last name, title, from_date and to_date for employees born between Jan 1, 1965 and Dec 31, 1965, and check for duplicates.  
 
 ### Files for the analysis:
-- CSV provided by client:
+- CSV provided by client (Data Folder):
   - Departments
   - Employees
   - Managers
