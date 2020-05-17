@@ -39,19 +39,15 @@
 ### Technical Analysis 1.  Number of Retiring Employees by Title
   - Using the ERD we can define where we need to extract the data to accomplish the requirements from the client.
   - To generate the table 1 we need to use 3 tables from the ERD, Employees, Title and Salaries.
-  - We used 2 inner joins to get the informartion for the employees. First inner join was used to join employees and title tables using the employee number (emp_no) to make the join.  First and last name is taking from employees table, titles and from_date from titles table.  The second inner join was used to join employees and salaries tables uisng emp_no to have the salaries for the employees.  Finally we only select the employees that born between 1952 and 1955.  Notice this table has duplicated emp_no(like employee ID), because there are employees that has changed the job position (title) and have more that one title while has been working with the client.  This process generates table 1: "retirement_emp_bytitle". 
+  - We used 2 inner joins to get the informartion for the employees. First inner join was used to join employees and title tables using the employee number (emp_no) to make the join.  Only emp_no matching in both tables (Employees and Titles) are going to be presented in table1.  First and last name is taking from employees table, titles and from_date from titles table.  The second inner join was used to join employees and salaries tables using emp_no to have the salaries for the employees (only emp_no matching in both tables are going to be presented in table1).  Finally we only select the employees that born between 1952 and 1955.  Notice this table has duplicated emp_no(like employee ID), because there are employees that has changed the job position (title) and have more that one title while has been working with the client.  This process generates table 1: "retirement_emp_bytitle". 
   - In table 2 we only select the employee with the most recent title, so we should not have more employees duplicate.  We used Partitioning to generate table 2: "emp_no_bylasttitle_from_Retire_empbytitle_to_date".  NOTE: on the first table the challenge requested from_date, the partition suggested to use to_date, we generated another table with to_date to make table 2, also notice if we use from_date (descending order) for the partition we get same information as we were using to_date, query is included on Queries_Challenge7.sql)
   - Total number of employees to retire from table 1 was: 133776 employees.  After handling the employee duplicates the number of employees was: 90398 employees (from table 2).  Both queries are included on Queries_Challenge7.sql.
   - Table 3: "count_bytitle", shows the number of employees by each title.  This give us an idea how many people are going to be retired by title.  Table is showing below:
-  ![count_bytitle.csv](https://github.com/DahianaMC/Pewlett-Hackard-Analysis/blob/master/Tables_for_Technical_Analysis1/count_bytitle.csv)
+  ![count_bytitle.csv](https://github.com/DahianaMC/Pewlett-Hackard-Analysis/blob/master/Tables_for_Technical_Analysis1/count_bytitle.png)
   - Table3 shows there are a higher number of Senior employees about to retire.  Client could take advantage of this information and plan to get employees trained before the Senior employees retire.
   
 ### Technical Analysis 2: Mentorship Eligibility.
-  
-_____________________________ 
-    1. Information provided by client include ERD diagram
-    - The information provided includes the tables showed in the ERD diag
-    
-    2. Include both tables for mentorship and let them know there is one table with duplicates
-    
-    3, make suggestion what else can be done with the data.
+  - Using the ERD again, we find the tables needed to create the mentorship elegibility table requiered by client.  In this case client is asking for a table containing employee number, first and last name, title and from_date and to_date.  Tables Employees and Titles has the information requested.
+  - We used one inner join to generate table 4: "mentorship_elegibility".  Only the employee ID (emp_no) matching in both tables (Employees and Titles) are going to be presented in table 4. The first and last name came from Employees table, and title, from_date and to_date came from Titles table.  Also client requested to generate this table only for employees born between Jan 1, 1965 and Dec 31, 1965.  This table contains duplicate employees ID becuase there are some employees that have more than one job position (title) during the time working with the client.
+  - In table5: "mentorship_elegibility_lasttitle", we are handling the duplicate rows.  We only leave the emp_no with the most uptated title reported.  In this case we also used patitioning, and used to_date to make the partition. 
+  - The total of employees for mentorship elegibily from table 4 (table with duplicates) is 2846 employees.  After hadling the duplicates the total of employees elegible for mentorship is 1940 employees.  Both queries are included on Queries_Challenge7.sql. 
