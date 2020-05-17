@@ -47,7 +47,7 @@
   - In table 2 we only select the employee with the most recent title, so we should not have more employees duplicate.  We used Partitioning to generate table 2: "emp_no_bylasttitle_from_Retire_empbytitle_to_date".  NOTE: on the first table the challenge requested from_date, the partition suggested to use to_date, we generated another table with to_date to make table 2, also notice if we use from_date (descending order) for the partition we get same information as we were using to_date, query is included on Queries_Challenge7.sql)
   - Total number of employees to retire from table 1 was: 133776 employees.  After handling the employee duplicates the number of employees was: 90398 employees (from table 2).  Both queries are included on Queries_Challenge7.sql.
   - Table 3: "count_bytitle", shows the number of employees by each title.  This give us an idea how many people are going to be retired by title.  Table is showing below:
-  ![count_bytitle.csv](https://github.com/DahianaMC/Pewlett-Hackard-Analysis/blob/master/Tables_for_Technical_Analysis1/count_bytitle.png)
+  - ![count_bytitle.csv](https://github.com/DahianaMC/Pewlett-Hackard-Analysis/blob/master/Tables_for_Technical_Analysis1/count_bytitle.png)
   - Table3 shows there is a higher number of Senior employees about to retire.  Client could take advantage of this information and plan to get employees trained before the Senior employees retire.
   
 ### Technical Analysis 2: Mentorship Eligibility.
