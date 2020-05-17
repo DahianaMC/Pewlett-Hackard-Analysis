@@ -59,7 +59,7 @@
 ## Conclusions and Recommentations
 - It is very important to hand the duplicates in this case becuase there is only one emp_no (employee ID) per employee.  Counting the total of employees in the tables were emp_no is duplicated, generates the count to be wrong, there are employees that will be counted twice or more times, as we can see when we make the count of the tables after handling the duplicate rows.
 
-- Since the list of employees about to retire is still very long, client can use more conditions to make several tables of the employees identifying for example the departement where they are working, and also they can create a table with managers about to retire.  Having tables with more consice information, make it easier for the client the review.
+- Since the list of employees about to retire is still very long, client can use more conditions to make several tables of the employees identifying for example the departement where they are working, and also they can create a table with managers about to retire.  Having tables with more consice information, make it easier for the client to review.
 
 - It is important for the client to know the age distribution of the employees.  Client can have a table where can use conditions based on birth date and have the employees on these ranges.  The tables can include information like title, salary, hire_date, department.
 
